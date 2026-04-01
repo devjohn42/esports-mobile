@@ -8,9 +8,18 @@ importers:
 
   .:
     dependencies:
+      '@expo-google-fonts/inter':
+        specifier: ^0.4.2
+        version: 0.4.2
       expo:
         specifier: 55.0.10-canary-20260327-0789fbc
         version: 55.0.10-canary-20260327-0789fbc(@babel/core@7.29.0)(@expo/dom-webview@55.0.4-canary-20260327-0789fbc)(react-native@0.83.4(@babel/core@7.29.0)(@types/react@19.2.14)(react@19.2.0))(react@19.2.0)(typescript@5.9.3)
+      expo-font:
+        specifier: ~55.0.4
+        version: 55.0.4(expo@55.0.10-canary-20260327-0789fbc)(react-native@0.83.4(@babel/core@7.29.0)(@types/react@19.2.14)(react@19.2.0))(react@19.2.0)
+      expo-linear-gradient:
+        specifier: ~55.0.9
+        version: 55.0.9(expo@55.0.10-canary-20260327-0789fbc)(react-native@0.83.4(@babel/core@7.29.0)(@types/react@19.2.14)(react@19.2.0))(react@19.2.0)
       expo-status-bar:
         specifier: 55.0.5-canary-20260327-0789fbc
         version: 55.0.5-canary-20260327-0789fbc(react-native@0.83.4(@babel/core@7.29.0)(@types/react@19.2.14)(react@19.2.0))(react@19.2.0)
@@ -20,6 +29,9 @@ importers:
       react-native:
         specifier: 0.83.4
         version: 0.83.4(@babel/core@7.29.0)(@types/react@19.2.14)(react@19.2.0)
+      react-native-safe-area-context:
+        specifier: ~5.6.2
+        version: 5.6.2(react-native@0.83.4(@babel/core@7.29.0)(@types/react@19.2.14)(react@19.2.0))(react@19.2.0)
     devDependencies:
       '@biomejs/biome':
         specifier: ^2.4.9
@@ -579,6 +591,9 @@ packages:
     engines: {node: '>=14.21.3'}
     cpu: [x64]
     os: [win32]
+
+  '@expo-google-fonts/inter@0.4.2':
+    resolution: {integrity: sha512-syfiImMaDmq7cFi0of+waE2M4uSCyd16zgyWxdPOY7fN2VBmSLKEzkfbZgeOjJq61kSqPBNNtXjggiQiSD6gMQ==}
 
   '@expo/cli@55.0.20-canary-20260327-0789fbc':
     resolution: {integrity: sha512-TItWLh8L89Oe2/B3KJO+AOhtNTzyzQ2kl5JaIRwjPkl+aas/S1783I8T03IbdhktxugnIxlJDZInsC/5nrDc+A==}
@@ -1328,6 +1343,13 @@ packages:
       expo: 55.0.10-canary-20260327-0789fbc
       react-native: '*'
 
+  expo-font@55.0.4:
+    resolution: {integrity: sha512-ZKeGTFffPygvY5dM/9ATM2p7QDkhsaHopH7wFAWgP2lKzqUMS9B/RxCvw5CaObr9Ro7x9YptyeRKX2HmgmMfrg==}
+    peerDependencies:
+      expo: '*'
+      react: '*'
+      react-native: '*'
+
   expo-font@55.0.5-canary-20260327-0789fbc:
     resolution: {integrity: sha512-H1uVmBBrXaOmZGvQt8vfqbRzXg9E7bLGl1hmst7KJ4aktyZIRpPBtuOrvBg808SZXGzvW/6DV5h3oiq1U7SSKQ==}
     peerDependencies:
@@ -1340,6 +1362,13 @@ packages:
     peerDependencies:
       expo: 55.0.10-canary-20260327-0789fbc
       react: '*'
+
+  expo-linear-gradient@55.0.9:
+    resolution: {integrity: sha512-S82iF+CVoSBVHdwusLQGh6Th/kcWLHU47jZhBPwyTrYWnsHZtb0oCqU96YvhDYvhbTdsuOaKEi+Xu+r/I2R8ow==}
+    peerDependencies:
+      expo: '*'
+      react: '*'
+      react-native: '*'
 
   expo-modules-autolinking@55.0.13-canary-20260327-0789fbc:
     resolution: {integrity: sha512-3LWgV6xSAPPituuTvk4hqkjyVa+/C6jSf4mPG+an2mMuRzP1jyEZPvajGwEhKkuBlFFImGUhsLcSGR9rjJ6x7Q==}
@@ -2094,6 +2123,12 @@ packages:
 
   react-native-is-edge-to-edge@1.3.1:
     resolution: {integrity: sha512-NIXU/iT5+ORyCc7p0z2nnlkouYKX425vuU1OEm6bMMtWWR9yvb+Xg5AZmImTKoF9abxCPqrKC3rOZsKzUYgYZA==}
+    peerDependencies:
+      react: '*'
+      react-native: '*'
+
+  react-native-safe-area-context@5.6.2:
+    resolution: {integrity: sha512-4XGqMNj5qjUTYywJqpdWZ9IG8jgkS3h06sfVjfw5yZQZfWnRFXczi0GnYyFyCc2EBps/qFmoCH8fez//WumdVg==}
     peerDependencies:
       react: '*'
       react-native: '*'
@@ -3118,6 +3153,8 @@ snapshots:
 
   '@biomejs/cli-win32-x64@2.4.9':
     optional: true
+
+  '@expo-google-fonts/inter@0.4.2': {}
 
   '@expo/cli@55.0.20-canary-20260327-0789fbc(@expo/dom-webview@55.0.4-canary-20260327-0789fbc)(expo-constants@55.0.10-canary-20260327-0789fbc(expo@55.0.10-canary-20260327-0789fbc)(react-native@0.83.4(@babel/core@7.29.0)(@types/react@19.2.14)(react@19.2.0))(typescript@5.9.3))(expo-font@55.0.5-canary-20260327-0789fbc(expo@55.0.10-canary-20260327-0789fbc)(react-native@0.83.4(@babel/core@7.29.0)(@types/react@19.2.14)(react@19.2.0))(react@19.2.0))(expo@55.0.10-canary-20260327-0789fbc)(react-native@0.83.4(@babel/core@7.29.0)(@types/react@19.2.14)(react@19.2.0))(react@19.2.0)(typescript@5.9.3)':
     dependencies:
@@ -4159,6 +4196,13 @@ snapshots:
       expo: 55.0.10-canary-20260327-0789fbc(@babel/core@7.29.0)(@expo/dom-webview@55.0.4-canary-20260327-0789fbc)(react-native@0.83.4(@babel/core@7.29.0)(@types/react@19.2.14)(react@19.2.0))(react@19.2.0)(typescript@5.9.3)
       react-native: 0.83.4(@babel/core@7.29.0)(@types/react@19.2.14)(react@19.2.0)
 
+  expo-font@55.0.4(expo@55.0.10-canary-20260327-0789fbc)(react-native@0.83.4(@babel/core@7.29.0)(@types/react@19.2.14)(react@19.2.0))(react@19.2.0):
+    dependencies:
+      expo: 55.0.10-canary-20260327-0789fbc(@babel/core@7.29.0)(@expo/dom-webview@55.0.4-canary-20260327-0789fbc)(react-native@0.83.4(@babel/core@7.29.0)(@types/react@19.2.14)(react@19.2.0))(react@19.2.0)(typescript@5.9.3)
+      fontfaceobserver: 2.3.0
+      react: 19.2.0
+      react-native: 0.83.4(@babel/core@7.29.0)(@types/react@19.2.14)(react@19.2.0)
+
   expo-font@55.0.5-canary-20260327-0789fbc(expo@55.0.10-canary-20260327-0789fbc)(react-native@0.83.4(@babel/core@7.29.0)(@types/react@19.2.14)(react@19.2.0))(react@19.2.0):
     dependencies:
       expo: 55.0.10-canary-20260327-0789fbc(@babel/core@7.29.0)(@expo/dom-webview@55.0.4-canary-20260327-0789fbc)(react-native@0.83.4(@babel/core@7.29.0)(@types/react@19.2.14)(react@19.2.0))(react@19.2.0)(typescript@5.9.3)
@@ -4170,6 +4214,12 @@ snapshots:
     dependencies:
       expo: 55.0.10-canary-20260327-0789fbc(@babel/core@7.29.0)(@expo/dom-webview@55.0.4-canary-20260327-0789fbc)(react-native@0.83.4(@babel/core@7.29.0)(@types/react@19.2.14)(react@19.2.0))(react@19.2.0)(typescript@5.9.3)
       react: 19.2.0
+
+  expo-linear-gradient@55.0.9(expo@55.0.10-canary-20260327-0789fbc)(react-native@0.83.4(@babel/core@7.29.0)(@types/react@19.2.14)(react@19.2.0))(react@19.2.0):
+    dependencies:
+      expo: 55.0.10-canary-20260327-0789fbc(@babel/core@7.29.0)(@expo/dom-webview@55.0.4-canary-20260327-0789fbc)(react-native@0.83.4(@babel/core@7.29.0)(@types/react@19.2.14)(react@19.2.0))(react@19.2.0)(typescript@5.9.3)
+      react: 19.2.0
+      react-native: 0.83.4(@babel/core@7.29.0)(@types/react@19.2.14)(react@19.2.0)
 
   expo-modules-autolinking@55.0.13-canary-20260327-0789fbc(typescript@5.9.3):
     dependencies:
@@ -5133,6 +5183,11 @@ snapshots:
   react-is@18.3.1: {}
 
   react-native-is-edge-to-edge@1.3.1(react-native@0.83.4(@babel/core@7.29.0)(@types/react@19.2.14)(react@19.2.0))(react@19.2.0):
+    dependencies:
+      react: 19.2.0
+      react-native: 0.83.4(@babel/core@7.29.0)(@types/react@19.2.14)(react@19.2.0)
+
+  react-native-safe-area-context@5.6.2(react-native@0.83.4(@babel/core@7.29.0)(@types/react@19.2.14)(react@19.2.0))(react@19.2.0):
     dependencies:
       react: 19.2.0
       react-native: 0.83.4(@babel/core@7.29.0)(@types/react@19.2.14)(react@19.2.0)
