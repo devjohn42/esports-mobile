@@ -8,6 +8,7 @@ import {
 import { StatusBar } from 'react-native'
 import { Background } from './src/_components/background'
 import { Loading } from './src/_components/loading/loading'
+import { Routes } from './src/routes'
 import { Home } from './src/screens/home'
 
 export default function App() {
@@ -21,7 +22,7 @@ export default function App() {
 	return (
 		<Background>
 			<StatusBar barStyle="light-content" backgroundColor="transparent" translucent />
-			{fontsLoaded ? <Home /> : <Loading />}
+			{fontsLoaded ? <Routes /> : <Loading />}
 		</Background>
 	)
 }

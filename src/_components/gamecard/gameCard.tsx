@@ -1,7 +1,6 @@
 import { LinearGradient } from 'expo-linear-gradient'
 import {
 	ImageBackground,
-	type ImageSourcePropType,
 	Text,
 	TouchableOpacity,
 	type TouchableOpacityProps
