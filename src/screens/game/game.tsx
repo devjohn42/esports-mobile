@@ -1,7 +1,7 @@
 import { Entypo } from '@expo/vector-icons'
 import { useNavigation, useRoute } from '@react-navigation/native'
 import { useEffect, useState } from 'react'
-import { FlatList, Image, TouchableOpacity, View } from 'react-native'
+import { FlatList, Image, Text, TouchableOpacity, View } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { Background } from '../../_components/background'
 import { Heading } from '../../_components/heading'
@@ -53,8 +53,19 @@ export function Game() {
 					keyExtractor={(item) => item.id}
 					renderItem={({ item }) => <InviteCard onConnect={() => {}} data={item} />}
 					horizontal
-					style={styles.invitesContainerList}
-					contentContainerStyle={styles.invitesList}
+					style={[styles.invitesContainerList]}
+					contentContainerStyle={[
+						invites.length > 0
+							? styles.invitesList
+							: {
+									flex: 1,
+									alignItems: 'center',
+									justifyContent: 'center'
+								}
+					]}
+					ListEmptyComponent={() => (
+						<Text style={styles.emptyList}>Não há convites criados para esse jogo</Text>
+					)}
 				/>
 			</SafeAreaView>
 		</Background>
