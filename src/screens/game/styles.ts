@@ -26,5 +26,13 @@ export const styles = StyleSheet.create({
 		height: 190,
 		borderRadius: 8,
 		marginTop: 32
+	},
+	invitesContainerList: {
+		width: '100%'
+	},
+	invitesList: {
+		paddingLeft: 32,
+		paddingRight: 64,
+		alignContent: 'flex-start'
 	}
 })

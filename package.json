@@ -17,10 +17,12 @@
 		"expo-font": "~55.0.4",
 		"expo-linear-gradient": "~55.0.9",
 		"expo-status-bar": "55.0.5-canary-20260327-0789fbc",
+		"phosphor-react-native": "^3.0.4",
 		"react": "19.2.0",
 		"react-native": "0.83.4",
 		"react-native-safe-area-context": "~5.6.2",
-		"react-native-screens": "~4.23.0"
+		"react-native-screens": "~4.23.0",
+		"react-native-svg": "15.15.3"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "^2.4.9",
