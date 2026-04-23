@@ -17,5 +17,3 @@ export const styles = StyleSheet.create({
 		fontFamily: THEME.FONT_FAMILY.BOLD
 	}
 })
-
-//-6:17

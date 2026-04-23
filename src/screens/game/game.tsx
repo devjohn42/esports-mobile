@@ -9,6 +9,7 @@ import { InviteCard, type InviteCardProps } from '../../_components/inviteCard'
 import logo from '../../assets/logo-nlw-esports.png'
 import { THEME } from '../../theme'
 import { styles } from './styles'
+import { InviteMatch } from '../../_components/inviteMatch'
 
 interface GameRouteParams {
 	id: string
@@ -18,6 +19,7 @@ interface GameRouteParams {
 
 export function Game() {
 	const [invites, setInvites] = useState<InviteCardProps[]>([])
+	const [inviteDiscordSelected, setInviteDiscordSelected] = useState<string>('morphos#4242')
 	const navigation = useNavigation()
 	const route = useRoute()
 	const game = route.params as GameRouteParams
@@ -27,7 +29,7 @@ export function Game() {
 	}
 
 	useEffect(() => {
-		fetch(`http://192.168.0.3:3333/games/${game.id}/ads`)
+		fetch(`http://192.168.0.30:3333/games/${game.id}/ads`)
 			.then((response) => response.json())
 			.then((data) => setInvites(data))
 	}, [])
@@ -51,22 +53,24 @@ export function Game() {
 				<FlatList
 					data={invites}
 					keyExtractor={(item) => item.id}
-					renderItem={({ item }) => <InviteCard onConnect={() => {}} data={item} />}
+					renderItem={({ item }) => <InviteCard onConnect={() => { }} data={item} />}
 					horizontal
 					style={[styles.invitesContainerList]}
 					contentContainerStyle={[
 						invites.length > 0
 							? styles.invitesList
 							: {
-									flex: 1,
-									alignItems: 'center',
-									justifyContent: 'center'
-								}
+								flex: 1,
+								alignItems: 'center',
+								justifyContent: 'center'
+							}
 					]}
 					ListEmptyComponent={() => (
 						<Text style={styles.emptyList}>Não há convites criados para esse jogo</Text>
 					)}
 				/>
+
+				<InviteMatch visible={inviteDiscordSelected.length > 0} discord='morphos#4242' onClose={() => setInviteDiscordSelected('')} />
 			</SafeAreaView>
 		</Background>
 	)
