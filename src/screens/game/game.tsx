@@ -19,7 +19,7 @@ interface GameRouteParams {
 
 export function Game() {
 	const [invites, setInvites] = useState<InviteCardProps[]>([])
-	const [inviteDiscordSelected, setInviteDiscordSelected] = useState<string>('morphos#4242')
+	const [inviteDiscordSelected, setInviteDiscordSelected] = useState<string>('')
 	const navigation = useNavigation()
 	const route = useRoute()
 	const game = route.params as GameRouteParams
@@ -27,6 +27,14 @@ export function Game() {
 	const handleGoBack = () => {
 		navigation.goBack()
 	}
+
+	async function getDiscordUser(adsId: string) {
+		fetch(`http://192.168.0.30:3333/ads/${adsId}/discord`)
+			.then((response) => response.json())
+			.then((data) => { setInviteDiscordSelected(data.discord) })
+	}
+
+	console.log(inviteDiscordSelected)
 
 	useEffect(() => {
 		fetch(`http://192.168.0.30:3333/games/${game.id}/ads`)
@@ -53,7 +61,7 @@ export function Game() {
 				<FlatList
 					data={invites}
 					keyExtractor={(item) => item.id}
-					renderItem={({ item }) => <InviteCard onConnect={() => { }} data={item} />}
+					renderItem={({ item }) => <InviteCard data={item} onConnect={() => { getDiscordUser(item.id) }} />}
 					horizontal
 					style={[styles.invitesContainerList]}
 					contentContainerStyle={[
@@ -65,6 +73,7 @@ export function Game() {
 								justifyContent: 'center'
 							}
 					]}
+
 					ListEmptyComponent={() => (
 						<Text style={styles.emptyList}>Não há convites criados para esse jogo</Text>
 					)}
