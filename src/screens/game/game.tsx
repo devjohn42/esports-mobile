@@ -34,8 +34,6 @@ export function Game() {
 			.then((data) => { setInviteDiscordSelected(data.discord) })
 	}
 
-	console.log(inviteDiscordSelected)
-
 	useEffect(() => {
 		fetch(`http://192.168.0.30:3333/games/${game.id}/ads`)
 			.then((response) => response.json())
@@ -79,7 +77,7 @@ export function Game() {
 					)}
 				/>
 
-				<InviteMatch visible={inviteDiscordSelected.length > 0} discord='morphos#4242' onClose={() => setInviteDiscordSelected('')} />
+				<InviteMatch visible={inviteDiscordSelected.length > 0} discord={inviteDiscordSelected} onClose={() => setInviteDiscordSelected('')} />
 			</SafeAreaView>
 		</Background>
 	)
